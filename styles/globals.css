@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    /* @apply mx-3 md:mx-1; */
+  }
+
+  body {
+    @apply h-[100%] w-[100%] text-slate-800 dark:text-slate-100;
+    /* @apply bg-gradient-to-bl from-slate-100 via-[#d6e5eb] to-slate-300; */
+    @apply bg-slate-300;
+    /* @apply dark:bg-gradient-to-br dark:from-slate-800 dark:via-gray-900 dark:to-slate-900; */
+    @apply dark:bg-slate-900;
+  }
+
+  h1 {
+    @apply font-sans font-extrabold;
+  }
+
+  p {
+    @apply font-sans;
+  }
+
+  /* width */
+  ::-webkit-scrollbar {
+    @apply w-3;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    @apply shadow;
+    @apply bg-slate-200 dark:bg-slate-700;
+    @apply rounded;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    @apply bg-slate-300 dark:bg-slate-800;
+    @apply rounded-xl;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-slate-400;
+  }
+}
+
+/* extracted classes for re-use */
+@layer components {
+  .nav-btn {
+    @apply flex h-10 w-10 items-center justify-center rounded-full border border-slate-400 bg-slate-200 p-1 text-slate-800 shadow hover:bg-slate-100 dark:bg-slate-900 dark:text-white dark:hover:bg-slate-700;
+  }
+
+  .menu-link {
+    @apply flex flex-row justify-between rounded px-1 py-2 text-sm text-slate-800 hover:bg-slate-100 hover:shadow-sm dark:text-white dark:hover:bg-slate-800;
+  }
+}
